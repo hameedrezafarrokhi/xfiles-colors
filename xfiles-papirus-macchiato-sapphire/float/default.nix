@@ -13,13 +13,14 @@
   libXrender,
   libXpm,
   pkg-config,
+  inputs,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "xfiles";
   version = "1.0.0";
 
-  src = ./.;
+  src = "${inputs.xfiles}/xfiles-papirus-macchiato-sapphire/float";
 
   naviteBuildInputs = [
     pkg-config
